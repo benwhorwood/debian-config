@@ -1,0 +1,12 @@
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias arduino='export _JAVA_AWT_WM_NONREPARENTING=1; arduino'
+alias batst='cat /sys/class/power_supply/BAT0/capacity'
+alias cwd='pwd | tr -d "\n" | xsel'
+
+alias emacs='emacsclient -c -a emacs'
+
+# Defaults for feh image viewer (same as '/' and 'k' commands when loaded)
+alias feh='feh --keep-zoom-vp --scale-down'
+
+# Java utils
+alias njava-h2='java -cp /usr/share/java/h2.jar org.h2.tools.Server'
