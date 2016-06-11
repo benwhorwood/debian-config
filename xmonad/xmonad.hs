@@ -15,6 +15,9 @@ main = do
         , manageHook = manageDocks <+> myManageHook
                         <+> manageHook defaultConfig
         , layoutHook = avoidStruts  $  layoutHook defaultConfig
+        , handleEventHook = mconcat
+                          [ docksEventHook
+                          , handleEventHook defaultConfig ]
         , logHook = dynamicLogWithPP xmobarPP
 
                         { ppOutput = hPutStrLn xmproc
