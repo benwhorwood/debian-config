@@ -1,0 +1,13 @@
+[Unit]
+Description=Emacs: the extensible, self-documenting text editor
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/emacs --daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Environment=SSH_AUTH_SOCK=%t/keyring/ssh
+Environment=PATH=/home/ben/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+Restart=always
+
+[Install]
+WantedBy=default.target
